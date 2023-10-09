@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- <script>
+      // var let
+      function testLet(x) {
+        var y;
+        if (x === 1) {
+          var d = 10;
+          y = 2;
+          console.log("print the d ->" + d);
+          console.log("print the y ->" + y);
+        }
+        console.log("print the d ->" + d);
+        console.log("print the y ->" + y);
+      }
+      testLet(1);
+      console.log("print the y ->" + y);
+    </script>
+    <script>
+        // ES5 function
+        var multiply = function(x,y){
+            return x*y
+        }
+
+        console.time("ES5")
+        console.log(multiply(2,3))
+        console.timeEnd("ES5")
+
+        // ES6 function
+        var multiply = (x,y)=>x*y
+
+        console.time("ES6")
+        console.log(multiply(2,3))
+        console.timeEnd("ES6")
+
+        // output
+        /*6
+        ES5: 0.107177734375 ms
+        6
+        ES6: 0.046875 ms
+        */
+    </script> -->
+
+    <script>
+        (function(){
+            console.log("self invoke function")
+            // spread operator impl 
+            // it will get convert the number of params in array object
+            // spread operator is used so that it will work in all browsers
+            function log(...params){
+                console.log(params)
+                console.log(params[0])
+            }
+
+            log(1,2,3,4,5,6,7,8,9,10)
+        })()
+    </script>
+  </head>
+  <body></body>
+</html>

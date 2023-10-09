@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        class Person{
+            #height;
+            constructor(name, age){
+                this.name = name; // public variable
+                this.age = age;
+                this.#height = "6ft" // private variable
+
+                console.log(this.name, this.age)
+            }
+
+            // public 
+            getConcatValue(){
+                console.log("call the public method");
+                return this.conCat();
+            }
+
+            conCat(){
+                return "name: "+ this.name + " age: "+ this.age;
+            }
+
+            // private
+            #privateMethod(){
+                console.log("call the private method");
+                return this.#height
+            }
+
+
+            // access private methods outside the class 
+            publicMethod(){
+                console.log("priveldged concept ")
+                return  this.#privateMethod()
+            }
+        }
+        let a = new Person("hello",23);
+
+        
+        console.log(a.getConcatValue())
+        // console.log(a.#privateMethod())  // Property '#privateMethod' is not accessible outside class 'Person' because it has a private identifier.j
+        console.log(a.publicMethod()) // priveldged
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
